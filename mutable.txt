@@ -1,0 +1,25 @@
+mutable : 변할수 있는, 잘변하는
+immutable : 변경할수없는, 불변의
+
+
+<python에서 mutable / immutable object 분류>
+
+<1. mutable ( 유사 Call by Reference) >
+-List
+-Dictionary
+=> 이거는 값이 변경되도 새로운 객체가 되는 것이 아니기 때문에 id가 변경되지 않으니까 값이 변경되면 원본도 변경되는것
+=> mutable객체는 함수에 넘길때도 당연히 넘어간 인자도 같은 id기 때문에 원본에 영향을 주는 것 (테스트해보면 바로 앎)
+
+<2. immutable ( 유사 Call by Value )>
+=> 값이 변경되면 object도 변경된다. 예를들어 tuple에 += ("shit", "bitch") 로 append 시키면 id가 변경됨
+-Number
+-String
+-Tuple
+
+=> 그럼 
+a = 3
+b = a
+b += 1
+
+b == a가 False인 이유는?
+b의 값이 바뀌었기 때문에 새로운 객체가 되어 id가 일치하지 않기 때문이다.
